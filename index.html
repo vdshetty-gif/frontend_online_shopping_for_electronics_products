@@ -1,0 +1,123 @@
+<html>
+<head>
+<style>
+body {background-color: #d3d3d3;}
+</style>
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body >
+<header>
+<h1><img src="logo.jpg" alt="logo" width="30" height="30">  Gadgetbazar</h1>
+<nav> <ul>
+<input type="text" name="Search" placeholder="Search your options here" >
+<input type="button" id="btnSearch" value="Search" />
+<li><a href="index.html">Home</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="cart.html">Cart</a></li>
+<select name="dropdown" id="box">
+<option value="More">More</option>
+    <option value="Return">Return</option>
+    <option value="Exchange">Exchange</option>
+    <option value="Report a problem">Report a problem</option>
+    <option value="Refund Policy">Refund Policy</option>
+  </select> 
+</ul> </nav>
+</header>
+<div class="senora-content">
+<div class="container">
+<div class="row">
+<div class="col-md-4"><!-- left -->
+<div class="list-group"><!-- products -->
+<li><a href="allproducts.html";  >  All Products </a></li>
+<li><a href="mobile.html";> Mobiles </a></li>
+<li><a href="laptops.html";> Laptops</a></li>
+<li><a href="speakers.html";> Speakers</a></li>
+<li><a href="tv.html";> TV </a> </li>
+</div>
+<img style="padding:20px"; src="s.jpg" alt="tp" width="300px " height="300px">
+<img style="padding:20px"; src = "ecommerce.jpg" alt="test" width = 300px height = 300px/>
+<form1>
+<h2>Signup with Gadgetbazar </h2>
+<div class="signup-home">
+<label> First Name</label>
+<input type="text" id="txtName" onkeypress="return check(event);" placeholder="Enter your First Name" required /></div>
+<span id="lblError" style="color: red"></span>
+<div class="signup-home">
+<label>Last Name</label>
+<input type="text" id="txtlName" onkeypress="return check(event);" placeholder="Enter your Last Name" required /></div>
+<span id="lblError" style="color: red"></span>
+
+<div class="signup-home">
+<label>Email</label>
+<input type="text" id="txtEmail" onkeyup="ValidateEmail();" placeholder="Your email address" required /></div>
+<span id="lblError1" style="color: red"></span>
+<div class="signup-home">
+<label>Mobile No</label>
+<input type="number" name="j" placeholder="Enter your phone number" required>
+</div>
+<div class="signup-home">
+<label>Address</label>
+<input type="text" id="address" placeholder="Enter your address" required>
+</div>
+<div class="signup-home">
+<label>Password</label>
+<input type="password" id="txtPassword" placeholder="Enter your password" required />
+</div>
+<div class="signup-home">
+<label>Confirm Password</label>
+<input type="password" id="txtConfirmPassword"  placeholder="Re-enter Password" required/>
+</div>
+<input type="button" id="btnSubmit" value="Register" class="signup-btn" onclick="return Validate()" />
+<p> Already have an account? <a href="login.html" style="color:blue;">Login!</a> </p></form1> 
+<br> <a>"Gadgetbazaar" a name that pops into our customers mind whenever they want to shop for premium electronic products,we provide our customers with wide range of electronic products and devices. Customer friendly website is our motto</a><br><br><br><br><br>
+<p><a href="https://www.google.com">For developer info Click here</a></p>
+<script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("txtPassword").value;
+        var confirmPassword = document.getElementById("txtConfirmPassword").value;
+        if (password != confirmPassword) {
+            alert("Passwords does not match.");
+            return false;
+        }
+        return true;
+    }
+   function check(e) {
+        var keyCode = e.keyCode || e.which;
+ 
+        var lblError = document.getElementById("lblError");
+        lblError.innerHTML = "";
+ 
+        //Regex for Valid Characters i.e. Alphabets.
+        var regex = /^[A-Za-z]+$/;
+ 
+        //Validate TextBox value against the Regex.
+        var isValid = regex.test(String.fromCharCode(keyCode));
+        if (!isValid) {
+            lblError.innerHTML = "Enter a Valid Name";
+        }
+ 
+        return isValid;
+    }
+function ValidateEmail() {
+        var email = document.getElementById("txtEmail").value;
+        var lblError = document.getElementById("lblError1");
+        lblError.innerHTML = "";
+        var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+        if (!expr.test(email)) {
+            lblError.innerHTML = "Please enter a valid email address";
+        }
+    }
+</script>
+
+<h2 style="color: black; position:absolute;
+<p>top:50%; bottom:50%;left:45%;right:15%;" > Welcome to Gadgetbazar!.<br> </h2></p>
+</div></div></div></div></div>
+
+<footer style="position: fixed;bottom: 0;left: 0;width: 100%;">
+<div class="footer"> &copy; 2020 Copyright:
+<a href="index.html" style="color:white" > Gadgetbazar.com</a>
+</div> </footer>
+
+</body>
+</html>
